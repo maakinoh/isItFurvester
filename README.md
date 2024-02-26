@@ -11,7 +11,7 @@ You need to install rust and `cargo` first.
 To build `isitfurvester` then clone this repo with 
 
 ```console
-$ git clone https://github.com/maakinoh/isitfurvester.git
+$ git clone https://github.com/maakinoh/isItFurvester.git
 $ cd isitfurvester
 ```
 
