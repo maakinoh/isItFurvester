@@ -12,7 +12,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     let args = Command::new("IsItFurversterAlready")
         .version("1.0")
         .author(crate_authors!("Maakinoh"))
-        .about("Requests from https://disitfurvesteralready.info/ if it is furverster already")
+        .about("Requests from https://isitfurvesteralready.info/ if it is furverster already")
         .arg(arg!(--url <VALUE> "URL for a custom Server standard is https://disitfurvesteralready.info/").required(false))
         .arg(arg!(--days "Returns the remaining days until furvester"))
         .get_matches();
