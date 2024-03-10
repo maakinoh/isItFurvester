@@ -20,7 +20,7 @@ fn main() -> Result<(), Box<dyn Error>> {
         .long("use-scraper")
         .action(ArgAction::SetTrue)
         //.value_name("FILE")
-        .help("Uses the old scraper instead of the api");
+        .help("Specify that the scraper should be used instead of the api");
     let args = Command::new("IsItFurversterAlready")
         .version("1.0")
         .author(crate_authors!("Maakinoh"))
@@ -50,7 +50,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     } else {
         // Use the api instead
 
-        let result : ApiResponse = reqwest::blocking::get(base_url.to_owned() +"api/getDaysRemaining")?.json()?;
+        let result : ApiResponse = reqwest::blocking::get(base_url.to_owned() +"api/v1/getDaysRemaining")?.json()?;
         if !args.get_flag("days") {
             if result.days_remaining > 0 {
                 println!("No");
